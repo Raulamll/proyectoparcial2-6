@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zCg-fe-TJj">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Películas-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="Películas" id="BYZ-38-t0r" customClass="PeliculasController" customModule="MoviePedia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QH4-F4-PlL">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="celdaPelicula" rowHeight="198" id="l6J-vw-UeB" customClass="CeldaPeliculaController" customModule="MoviePedia" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="198"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="l6J-vw-UeB" id="vuy-Tx-h7D">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="198"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Director" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GXj-W4-fjt">
+                                                    <rect key="frame" x="20" y="40" width="56.5" height="20"/>
+                                                    <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Título de la película" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YXP-Eu-sms">
+                                                    <rect key="frame" x="20" y="11" width="149.5" height="21"/>
+                                                    <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Año" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhV-0p-8iJ">
+                                                    <rect key="frame" x="20" y="68" width="27" height="18.5"/>
+                                                    <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yc7-PX-gSf">
+                                                    <rect key="frame" x="220" y="13" width="168" height="172"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="YXP-Eu-sms" firstAttribute="leading" secondItem="vuy-Tx-h7D" secondAttribute="leadingMargin" id="Ga0-jm-9Ml"/>
+                                                <constraint firstItem="lhV-0p-8iJ" firstAttribute="leading" secondItem="vuy-Tx-h7D" secondAttribute="leadingMargin" id="LkY-aI-bff"/>
+                                                <constraint firstItem="YXP-Eu-sms" firstAttribute="top" secondItem="vuy-Tx-h7D" secondAttribute="topMargin" id="dEh-NX-Ua0"/>
+                                                <constraint firstItem="GXj-W4-fjt" firstAttribute="leading" secondItem="vuy-Tx-h7D" secondAttribute="leadingMargin" id="fPN-j4-rL1"/>
+                                                <constraint firstItem="GXj-W4-fjt" firstAttribute="top" secondItem="YXP-Eu-sms" secondAttribute="bottom" constant="8" id="gKX-Av-dEQ"/>
+                                                <constraint firstItem="lhV-0p-8iJ" firstAttribute="top" secondItem="GXj-W4-fjt" secondAttribute="bottom" constant="8" id="lMq-Mi-a7m"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="ivImagen" destination="yc7-PX-gSf" id="oxa-Jj-SDB"/>
+                                            <outlet property="lblAño" destination="lhV-0p-8iJ" id="3Of-O5-RUG"/>
+                                            <outlet property="lblDirector" destination="GXj-W4-fjt" id="qa0-7Y-InK"/>
+                                            <outlet property="lblTitulo" destination="YXP-Eu-sms" id="B86-0y-hCD"/>
+                                            <segue destination="YBQ-18-d1u" kind="show" id="6uF-A2-3J8"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="LHd-Fy-K36"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="c0v-jX-olk"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="QH4-F4-PlL" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="83Q-wh-IzF"/>
+                            <constraint firstItem="QH4-F4-PlL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="BFy-oy-Fth"/>
+                            <constraint firstItem="QH4-F4-PlL" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="GdH-Pj-wxv"/>
+                            <constraint firstItem="QH4-F4-PlL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ixc-to-wKP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Películas" id="ism-vw-WrL"/>
+                    <connections>
+                        <outlet property="tvPeliculas" destination="QH4-F4-PlL" id="wHX-fk-9mt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="253.62318840579712" y="136.60714285714286"/>
+        </scene>
+        <!--Detalles Pelicula Controller-->
+        <scene sceneID="x2u-63-MaK">
+            <objects>
+                <viewController id="YBQ-18-d1u" customClass="DetallesPeliculaController" customModule="MoviePedia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B1p-56-Wig">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Director:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xt6-pX-xke">
+                                <rect key="frame" x="20" y="97" width="67" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="67" id="zZR-Hf-vV6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Año:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Mp-1G-9KO">
+                                <rect key="frame" x="20" y="126" width="35" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="bzX-Ph-bSi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Género:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hKl-FF-IcU">
+                                <rect key="frame" x="20" y="155" width="61.5" height="21"/>
+                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valor director" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qDU-JZ-LNF">
+                                <rect key="frame" x="119" y="99" width="77" height="16"/>
+                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valor año" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qAK-G7-3aH">
+                                <rect key="frame" x="119" y="127" width="55.5" height="16"/>
+                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valor género" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EVj-TV-zuA">
+                                <rect key="frame" x="119" y="158" width="74" height="16"/>
+                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7i4-aa-sqC">
+                                <rect key="frame" x="0.0" y="350" width="414" height="512"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="celdaPersonaje" rowHeight="61" id="0pq-Em-4lT" customClass="CeldaPersonajeController" customModule="MoviePedia" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="61"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0pq-Em-4lT" id="Kd3-M3-pCa">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="61"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interprete" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mtK-TA-ye1">
+                                                    <rect key="frame" x="20" y="11" width="73" height="21"/>
+                                                    <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personaje" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fDw-JF-ax0">
+                                                    <rect key="frame" x="20" y="34" width="59" height="16"/>
+                                                    <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="13"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="mtK-TA-ye1" firstAttribute="leading" secondItem="Kd3-M3-pCa" secondAttribute="leadingMargin" id="Bc3-Sz-kYY"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="fDw-JF-ax0" secondAttribute="bottom" id="RKK-ig-FoV"/>
+                                                <constraint firstItem="mtK-TA-ye1" firstAttribute="top" secondItem="Kd3-M3-pCa" secondAttribute="topMargin" id="mCW-lT-fN4"/>
+                                                <constraint firstItem="fDw-JF-ax0" firstAttribute="leading" secondItem="Kd3-M3-pCa" secondAttribute="leadingMargin" id="xsy-ZF-dPM"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblInterprete" destination="mtK-TA-ye1" id="HzB-Mc-EVv"/>
+                                            <outlet property="lblPersonaje" destination="fDw-JF-ax0" id="fhY-Jg-mb7"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="YBQ-18-d1u" id="6cE-bo-7Ik"/>
+                                    <outlet property="delegate" destination="YBQ-18-d1u" id="0dD-Hy-aB5"/>
+                                </connections>
+                            </tableView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kpR-mF-OaR">
+                                <rect key="frame" x="237" y="97" width="157" height="222"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duración:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0jM-5n-K0N">
+                                <rect key="frame" x="20" y="184" width="73" height="21"/>
+                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valor duración" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0hI-jT-DT1">
+                                <rect key="frame" x="119" y="187" width="84" height="16"/>
+                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Productora:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qAw-dJ-ksG">
+                                <rect key="frame" x="20" y="213" width="88" height="21"/>
+                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valor productora" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jgn-Ll-2Xg">
+                                <rect key="frame" x="119" y="216" width="96" height="16"/>
+                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3OO-eF-AfO">
+                                <rect key="frame" x="20" y="242" width="54" height="21"/>
+                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valor rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K28-U2-dMe">
+                                <rect key="frame" x="119" y="244" width="66" height="16"/>
+                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ganancia:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jGx-1z-HpB">
+                                <rect key="frame" x="20" y="300" width="77.5" height="21"/>
+                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valor recaudacion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldN-Gd-Bb8">
+                                <rect key="frame" x="119" y="303" width="105" height="16"/>
+                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Presupuesto:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="px5-vh-pw3">
+                                <rect key="frame" x="20" y="271" width="101" height="21"/>
+                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valor presupuesto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3PG-tN-CDs">
+                                <rect key="frame" x="124" y="274" width="105" height="16"/>
+                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0jM-5n-K0N" firstAttribute="leading" secondItem="DR0-Xf-yNL" secondAttribute="leading" constant="20" id="119-qd-S3x"/>
+                            <constraint firstItem="1Mp-1G-9KO" firstAttribute="leading" secondItem="DR0-Xf-yNL" secondAttribute="leading" constant="20" id="1Dm-lC-cGQ"/>
+                            <constraint firstItem="qAK-G7-3aH" firstAttribute="top" secondItem="qDU-JZ-LNF" secondAttribute="bottom" constant="12" id="2hk-7D-Dmg"/>
+                            <constraint firstItem="0hI-jT-DT1" firstAttribute="top" secondItem="EVj-TV-zuA" secondAttribute="bottom" constant="13" id="30n-tb-5gI"/>
+                            <constraint firstItem="3PG-tN-CDs" firstAttribute="leading" secondItem="px5-vh-pw3" secondAttribute="trailing" constant="3" id="6uw-91-0Pj"/>
+                            <constraint firstItem="jGx-1z-HpB" firstAttribute="top" secondItem="px5-vh-pw3" secondAttribute="bottom" constant="8" id="AXB-Mt-oiF"/>
+                            <constraint firstItem="K28-U2-dMe" firstAttribute="leading" secondItem="3OO-eF-AfO" secondAttribute="trailing" constant="45" id="BzU-AH-mhn"/>
+                            <constraint firstItem="px5-vh-pw3" firstAttribute="leading" secondItem="DR0-Xf-yNL" secondAttribute="leading" constant="20" id="E9q-am-YTE"/>
+                            <constraint firstItem="K28-U2-dMe" firstAttribute="top" secondItem="jgn-Ll-2Xg" secondAttribute="bottom" constant="12" id="HOi-es-fmq"/>
+                            <constraint firstItem="7i4-aa-sqC" firstAttribute="trailing" secondItem="DR0-Xf-yNL" secondAttribute="trailing" id="Hic-66-YOk"/>
+                            <constraint firstItem="px5-vh-pw3" firstAttribute="top" secondItem="3OO-eF-AfO" secondAttribute="bottom" constant="8" id="MEq-tO-3Xg"/>
+                            <constraint firstItem="jgn-Ll-2Xg" firstAttribute="top" secondItem="0hI-jT-DT1" secondAttribute="bottom" constant="13" id="Mby-l8-VkW"/>
+                            <constraint firstItem="EVj-TV-zuA" firstAttribute="top" secondItem="qAK-G7-3aH" secondAttribute="bottom" constant="15" id="QI9-qJ-k8j"/>
+                            <constraint firstItem="jGx-1z-HpB" firstAttribute="leading" secondItem="DR0-Xf-yNL" secondAttribute="leading" constant="20" id="QIE-fp-oXd"/>
+                            <constraint firstItem="0jM-5n-K0N" firstAttribute="top" secondItem="hKl-FF-IcU" secondAttribute="bottom" constant="8" id="QMo-R8-dIS"/>
+                            <constraint firstItem="qAw-dJ-ksG" firstAttribute="top" secondItem="0jM-5n-K0N" secondAttribute="bottom" constant="8" id="Qnw-Bh-6eW"/>
+                            <constraint firstItem="7i4-aa-sqC" firstAttribute="leading" secondItem="DR0-Xf-yNL" secondAttribute="leading" id="Sub-OZ-mLL"/>
+                            <constraint firstItem="qAw-dJ-ksG" firstAttribute="leading" secondItem="DR0-Xf-yNL" secondAttribute="leading" constant="20" id="TQg-iQ-mYs"/>
+                            <constraint firstItem="jgn-Ll-2Xg" firstAttribute="leading" secondItem="qAw-dJ-ksG" secondAttribute="trailing" constant="11" id="U7e-po-gNf"/>
+                            <constraint firstItem="qAK-G7-3aH" firstAttribute="leading" secondItem="1Mp-1G-9KO" secondAttribute="trailing" constant="64" id="VGl-h5-8Wh"/>
+                            <constraint firstItem="qDU-JZ-LNF" firstAttribute="top" secondItem="DR0-Xf-yNL" secondAttribute="top" constant="11" id="WV9-z3-8Bx"/>
+                            <constraint firstItem="1Mp-1G-9KO" firstAttribute="top" secondItem="xt6-pX-xke" secondAttribute="bottom" constant="8" id="YXb-Ux-ypS"/>
+                            <constraint firstItem="hKl-FF-IcU" firstAttribute="top" secondItem="1Mp-1G-9KO" secondAttribute="bottom" constant="8" id="c81-QZ-IKF"/>
+                            <constraint firstItem="3PG-tN-CDs" firstAttribute="top" secondItem="K28-U2-dMe" secondAttribute="bottom" constant="14" id="grv-QZ-80y"/>
+                            <constraint firstItem="7i4-aa-sqC" firstAttribute="top" secondItem="jGx-1z-HpB" secondAttribute="bottom" constant="29" id="gxq-Z9-ch7"/>
+                            <constraint firstItem="EVj-TV-zuA" firstAttribute="leading" secondItem="hKl-FF-IcU" secondAttribute="trailing" constant="37.5" id="iDe-VI-Pci"/>
+                            <constraint firstItem="7i4-aa-sqC" firstAttribute="bottom" secondItem="DR0-Xf-yNL" secondAttribute="bottom" id="kIZ-PV-u2C"/>
+                            <constraint firstItem="3OO-eF-AfO" firstAttribute="leading" secondItem="DR0-Xf-yNL" secondAttribute="leading" constant="20" id="opU-pK-n1L"/>
+                            <constraint firstItem="7i4-aa-sqC" firstAttribute="top" secondItem="ldN-Gd-Bb8" secondAttribute="bottom" constant="31" id="rTD-Ed-yip"/>
+                            <constraint firstItem="xt6-pX-xke" firstAttribute="top" secondItem="DR0-Xf-yNL" secondAttribute="top" constant="9" id="rou-nZ-ggc"/>
+                            <constraint firstItem="qDU-JZ-LNF" firstAttribute="leading" secondItem="xt6-pX-xke" secondAttribute="trailing" constant="32" id="tde-vm-BfD"/>
+                            <constraint firstItem="xt6-pX-xke" firstAttribute="leading" secondItem="DR0-Xf-yNL" secondAttribute="leading" constant="20" id="w1k-XO-rQZ"/>
+                            <constraint firstItem="ldN-Gd-Bb8" firstAttribute="leading" secondItem="jGx-1z-HpB" secondAttribute="trailing" constant="21.5" id="wCk-MJ-uYK"/>
+                            <constraint firstItem="3OO-eF-AfO" firstAttribute="top" secondItem="qAw-dJ-ksG" secondAttribute="bottom" constant="8" id="wRH-zG-gRL"/>
+                            <constraint firstItem="0hI-jT-DT1" firstAttribute="leading" secondItem="0jM-5n-K0N" secondAttribute="trailing" constant="26" id="wRL-Ez-0qe"/>
+                            <constraint firstItem="ldN-Gd-Bb8" firstAttribute="top" secondItem="3PG-tN-CDs" secondAttribute="bottom" constant="13" id="x7W-jE-ToA"/>
+                            <constraint firstItem="hKl-FF-IcU" firstAttribute="leading" secondItem="DR0-Xf-yNL" secondAttribute="leading" constant="20" id="zyu-dh-Vkt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="DR0-Xf-yNL"/>
+                    </view>
+                    <connections>
+                        <outlet property="lblAño" destination="qAK-G7-3aH" id="VQq-tn-Mc7"/>
+                        <outlet property="lblDirector" destination="qDU-JZ-LNF" id="hwZ-fy-Nhu"/>
+                        <outlet property="lblDuracion" destination="0hI-jT-DT1" id="PIS-b0-R2a"/>
+                        <outlet property="lblGenero" destination="EVj-TV-zuA" id="HT9-Cv-B9J"/>
+                        <outlet property="lblPresupuesto" destination="3PG-tN-CDs" id="46g-36-Myh"/>
+                        <outlet property="lblProductora" destination="jgn-Ll-2Xg" id="e1o-hA-q5Q"/>
+                        <outlet property="lblRating" destination="K28-U2-dMe" id="ArF-wI-gND"/>
+                        <outlet property="lblRecaudacion" destination="ldN-Gd-Bb8" id="k8W-Rn-gcl"/>
+                        <outlet property="tvPersonajes" destination="7i4-aa-sqC" id="ZwF-tH-VPz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JMD-l4-vH9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1069.5652173913045" y="136.60714285714286"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mPA-U5-aGS">
+            <objects>
+                <navigationController id="zCg-fe-TJj" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oW9-Uh-4Fu">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="y9x-4t-4O1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gFa-W7-3X3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-632" y="90"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+</document>
